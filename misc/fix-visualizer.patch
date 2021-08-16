@@ -1,0 +1,27 @@
+diff --git a/src/visualizer/visualizer/plugins/ipv4_routing_table.py b/src/visualizer/visualizer/plugins/ipv4_routing_table.py
+index cf1cd2713..7542391c0 100644
+--- a/src/visualizer/visualizer/plugins/ipv4_routing_table.py
++++ b/src/visualizer/visualizer/plugins/ipv4_routing_table.py
+@@ -101,6 +101,8 @@ class ShowIpv4RoutingTable(InformationWindow):
+         """
+         node = ns.network.NodeList.GetNode(self.node_index)
+         ipv4 = node.GetObject(ns.internet.Ipv4.GetTypeId())
++        if ipv4 is None:
++            return
+         routing = ipv4.GetRoutingProtocol()
+         if routing is None:
+             return
+diff --git a/src/visualizer/visualizer/plugins/ndnsim_faces.py b/src/visualizer/visualizer/plugins/ndnsim_faces.py
+index 2a325f394..d6f5a0190 100644
+--- a/src/visualizer/visualizer/plugins/ndnsim_faces.py
++++ b/src/visualizer/visualizer/plugins/ndnsim_faces.py
+@@ -60,7 +60,7 @@ class ShowNdnFaces(InformationWindow):
+         self.visualizer.remove_information_window(self)
+
+     def update(self):
+-        faces = ndn.L3Protocol.getL3Protocol(self.node).getForwarder().getFaceTable()
++        faces = ndn.L3Protocol.getL3Protocol(self.node).getFaceTable()
+
+         self.table_model.clear()
+
+

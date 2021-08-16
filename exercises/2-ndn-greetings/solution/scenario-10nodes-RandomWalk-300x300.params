@@ -1,0 +1,14 @@
+model=RandomWalk
+ignore=3600.0
+randomSeed=1629025468872
+x=300.0
+y=300.0
+duration=2700.0
+nn=10
+circular=false
+J=2D
+mode=t
+modeDelta=15.0
+minspeed=1.0
+maxspeed=20.0
+maxpause=0.0
