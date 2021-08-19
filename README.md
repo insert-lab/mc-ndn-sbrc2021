@@ -7,10 +7,13 @@ you get started with NDN architecture, ndnSIM simulator, NDN-CXX/NFD
 APIs, and the overall NDN application development. The NDN tutorial is
 organized into several modules:
 
-1. Simple Producer/Consumer Application
+1. NDN Helloworld
+* [NDN-Helloworld](./exercises/1-ndn-helloworld)
+
+2. Simple Producer/Consumer Application
 * [NDN-Greetings](./exercises/2-ndn-greetings)
 
-2. Secure NDN Applications
+3. Secure NDN Applications
 * [Signed NDN-Greetings](./exercises/3-signed-ndn-greetings)
 
 ## NDN-Greetings
